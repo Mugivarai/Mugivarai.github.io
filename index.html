@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Приглашение на свадьбу</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@300&family=Cormorant+Garamond:wght@300&family=Parisienne&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            color-scheme: light;
+        }
+
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0%;
+            padding: 0%;
+            font-family: 'Cormorant Garamond', serif; /* Основной тонкий шрифт */
+            font-weight: 300;
+        }
+        h1, h2 {
+            font-family: 'Playfair Display', serif; /* Для заголовков */
+        }
+        p {
+            font-family: 'Great Vibes', cursive; /* Для акцентного текста */
+            font-size: 24px;
+        }
+        main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            height: auto;
+            background-image: linear-gradient(black,gray,white);
+        }
+        section{
+            width: 100%;
+            height: auto;
+            max-width: 500px;
+            background-color: white;
+        }
+        #section-one{
+            background-image: url(https://avatars.mds.yandex.net/i?id=1a8e86d4912955680e7d5adffc9af5cf_l-6974903-images-thumbs&ref=rim&n=13&w=1600&h=2400);
+            height: 100vh;
+            min-height: 100vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            flex-direction: column;
+        }
+        
+        #section-one > h1{
+            font-size: 55px;
+            text-align: center;
+            color: white;
+            font-weight: 100;
+            margin-bottom: 0%;
+        }
+        #section-one > h2{
+            text-align: center;
+            color: white;
+            font-weight: 100;
+            margin-bottom: 0%;
+        }
+        #section-one > p{
+            text-align: center;
+            color: white;
+            font-weight: 100;
+            margin-bottom: 20%;
+        }
+
+        .left-time-block > h1{
+            font-size: 45px;
+            text-align: center;
+            color: black;
+            font-weight: 100;
+            margin-bottom: 0%;
+        }
+        
+        .left-time-block{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .left-time-item{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .left-time-item > b{
+            font-weight: bolder;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .left-time-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .section-h1{
+            font-size: 50px;
+            text-align: center;
+            font-weight: 100;
+        }
+
+        .programm-container{
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(239, 255, 169);
+            width: 90%;
+            height: auto;
+            gap: 10px;
+            margin-left: 5%;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .programm-container::before{
+            position: absolute;
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            content: '';
+            background-image: url(https://img.banket.ru/restaurants/restaurant_6606/gallery/filedffb72f7b76dc2e1784bc6cf5bab341d.jpg);
+            background-position: center;
+            background-size: 100% 100%;
+            top: 0%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        ul{
+            list-style-type: none; 
+            padding: 0; 
+            margin: 0; 
+        }
+
+        .programm-container li{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .programm-container > li:nth-child(1){
+            margin-top: 20px;
+        }
+
+        .programm-container span{
+            font-size: 30px;
+        }
+        
+        #section-three{
+            min-height: 100vh;
+        }
+
+        .sect-three-back-image{
+            width: 100%;
+            height: 275px;
+            background-image: url(https://avatars.dzeninfra.ru/get-zen_doc/8866523/pub_6440076705680c15fb57dd75_644007a305680c15fb57e736/scale_1200);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .dress-image{
+            width: 100%;
+            height: 100%;
+        }
+
+        #myForm {
+            width: 80%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            margin-left: 10%;
+            background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 40px;
+            color: black; /* Черный текст */
+            box-shadow: 0 0 10px rgba(218, 165, 32, 0.3); /* Легкое золотое свечение */
+        }
+
+        .myForm-item {
+            width: 100%;
+        }
+
+        .myForm-item input,
+        .myForm-item label {
+            color: black;
+            font-size: 16px;
+        }
+
+        .myForm-item input[type="radio"] {
+            accent-color: gold; /* Радио-кнопки с золотым акцентом */
+        }
+
+        .myForm-item input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border: 2px solid rgba(255, 217, 0, 0.658);
+            background-color: white;
+            color: black;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            padding: 10px 20px;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.5s;
+            
+        }
+
+        button:active,
+        button:hover {
+            background-color: #000000;
+            color: rgb(255, 255, 255);
+            transform: scale(1.05);
+        }
+
+        footer{
+            margin-top: 40px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .anime{
+            animation: anime-appear 1s ease-in-out 0s 1 forwards;
+            animation-play-state: paused;
+        }
+
+        @keyframes anime-appear{
+            0%{
+                opacity: 0.0;
+                transform: translateY(20px);
+            }
+            100%{
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+            const targets = document.querySelectorAll('.anime');
+
+			const observerOptions = {
+				root: null,
+				rootMargin: "0px",
+				threshold: 0
+			};
+
+			let callback = function(entries) {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						if(entry.target.classList.contains('anime')){
+							entry.target.style.animationPlayState = 'running';
+                            observer.unobserve(entry.target);
+						}
+					}
+				});
+			};
+
+			let observer = new IntersectionObserver(callback, observerOptions);
+
+			targets.forEach(target => observer.observe(target));
+        });
+    </script>
+</head>
+<body>
+    <main>
+        <section id="section-one">
+            <h1 class="anime">Алексей <br>и Маргарита</h1>
+            <h2 class="anime">18.09.2025</h2>
+            <p class="anime">С радостью приглашаем вас разделить с нами<br> один из самых
+                важных дней<br> в нашей жизни <br>- наш свадебный день!
+            </p>
+        </section>
+        <section id="section-two">
+            <div class="left-time-block anime">
+                <h1>До свадьбы осталось</h1>
+                <div class="left-time-container">
+                    <div class="left-time-item">
+                        <b>185</b>
+                        <span>дней</span>
+                    </div>
+                    <div class="left-time-item">
+                        <b>11</b>
+                        <span>часов</span>
+                    </div>
+                    <div class="left-time-item">
+                        <b>22</b>
+                        <span>минут</span>
+                    </div>
+                </div>
+            </div>
+            <h1 class="section-h1 anime">Программа</h1>
+            <br>
+            <ul class="programm-container anime">
+                <li><span>16:30</span><b> - Сбор гостей</b></li>
+                <li><span>17:00</span><b> - Торжественная церемония</b></li>
+                <li><span>18:00</span><b> - Фотосессия</b></li>
+                <li><span>19:00</span><b> - Начало банкета</b></li>
+                <li><span>21:00</span><b> - Вынос торта</b></li>
+                <li><span>21:30</span><b> - Праздничный Салют</b></li>
+            </ul>
+        </section>
+        <section id="section-three">
+            <div class="sect-three-back-image"></div>
+            <h1 class="section-h1 anime">Дресс код</h1>
+            <img src="https://cdn5.vectorstock.com/i/1000x1000/62/64/white-tie-vector-526264.jpg" alt="" class="dress-image anime">
+            <h1 class="section-h1 anime">Анкета гостя</h1>
+            <form id="myForm" class="anime">
+                <span>Подтвердите присутствие:</span>
+                <div class="myForm-item">
+                    <input type="radio" id="presence" name="presence">
+                    <label for="presence">Я приду</label><br>
+                    <input type="radio" id="no-presence" name="presence">
+                    <label for="no-presence">Я не приду</label>
+                </div>
+                <div class="myForm-item">
+                    <label for="">Ваше имя и фамилия</label><br>
+                    <input type="text">
+                </div>
+                <button type="button">Отправить отчет</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <b class="anime">Будем счастливы разделить этот значимый<br>
+            день для нас с вами <br>31.05.2025
+        </b>
+    </footer>
+</body>
+</html>
